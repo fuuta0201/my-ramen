@@ -21,4 +21,24 @@ export const genres: Genre[] = [
     id: 5,
     name: "つけ麺",
   },
+  {
+    id: 6,
+    name: "二郎系",
+  },
+  {
+    id: 7,
+    name: "家系",
+  },
+  {
+    id: 8,
+    name: "背脂",
+  },
+  {
+    id: 9,
+    name: "タンメン",
+  },
+  {
+    id: 10,
+    name: "鶏白湯",
+  },
 ];

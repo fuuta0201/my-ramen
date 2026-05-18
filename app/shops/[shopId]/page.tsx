@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { ramenShops } from "@/src/data/ramenShops";
@@ -38,6 +39,19 @@ export default async function ShopPage({ params }: ShopPageProps) {
         </Link>
 
         <article className="border-border flex flex-col gap-8 rounded-lg border p-6 sm:p-8">
+          {shop.imageUrl && (
+            <div className="bg-muted relative aspect-[4/3] w-full overflow-hidden rounded-md">
+              <Image
+                src={shop.imageUrl}
+                alt={`${shop.name}のラーメン`}
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 704px, calc(100vw - 48px)"
+                priority
+              />
+            </div>
+          )}
+
           <div className="flex flex-col gap-4">
             <p className="text-muted-foreground text-sm font-medium">
               {genre?.name ?? "ジャンル未設定"}

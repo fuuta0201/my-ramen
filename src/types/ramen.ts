@@ -3,6 +3,7 @@ export type RamenShop = {
   name: string;
   genreId: number;
   googleMapUrl: string;
+  imageUrl?: string;
 };
 
 export type Genre = {

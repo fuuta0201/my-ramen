@@ -23,7 +23,7 @@ describe("ramen utilities", () => {
   test("getShopsByGenreId returns only shops in the requested genre", () => {
     const shops = getShopsByGenreId(2);
 
-    expect(shops).toHaveLength(2);
+    expect(shops).toEqual(ramenShops.filter((shop) => shop.genreId === 2));
     expect(shops.every((shop) => shop.genreId === 2)).toBe(true);
   });
 
