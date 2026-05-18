@@ -7,6 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "vitest run",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook",
     "format": "prettier --write .",
     "prepare": "husky"
   },
@@ -20,18 +24,26 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^10.4.0",
+    "@storybook/nextjs-vite": "^10.4.0",
+    "@storybook/test-runner": "^0.24.4",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.5",
     "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
     "lint-staged": "^17.0.5",
+    "playwright": "^1.60.0",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "storybook": "^10.4.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.6"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs,json,css,md}": [
