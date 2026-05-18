@@ -70,9 +70,9 @@ type Genre = {
 
 本アプリケーションの開発に用いる技術は以下の通りです。
 
-- Node.js(v22.22.0)
+- Node.js(v24.15.0)
 - npm
-- Next.js(v16.2.5, Static export)
+- Next.js(v16.2.6, Static export)
 - Typescript
 - Tailwnd CSS
 - shadcn/ui
