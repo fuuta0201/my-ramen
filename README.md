@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Ramen
 
-## Getting Started
+好みのラーメンジャンルからおすすめのラーメン店を探せる、Next.js Static Export構成のWebアプリです。
 
-First, run the development server:
+## 開発
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ローカルでは `http://localhost:3000` を開いて確認します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## テスト
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run test
+npm run build
+```
 
-## Learn More
+Storybookは以下で起動できます。
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run storybook
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## GitHub Pagesへのデプロイ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub Pages向けの静的デプロイは [.github/workflows/deploy.yml](./.github/workflows/deploy.yml) で定義しています。
 
-## Deploy on Vercel
+デプロイ時は `GITHUB_PAGES=true` を指定して `npm run build` を実行し、`next.config.ts` の `basePath` と `assetPrefix` を `/my-ramen` に切り替えます。生成された `out` ディレクトリを `actions/upload-pages-artifact` でアップロードし、`actions/deploy-pages` で公開します。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 手順
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. 変更を `main` ブランチへpushします。
+2. GitHub Actionsの `Deploy to GitHub Pages` workflowが実行されます。
+3. `npm ci` と `npm run build` が実行され、静的ファイルが `out` に生成されます。
+4. `out/.nojekyll` を作成して、GitHub Pages上で `_next` 配下のアセットがそのまま配信されるようにします。
+5. `out` がGitHub Pagesへデプロイされます。
+
+GitHub上のPages設定はこのリポジトリ外の操作です。PagesのSourceにはGitHub Actionsを利用してください。
+
+リポジトリ名を `my-ramen` 以外に変更する場合は、[next.config.ts](./next.config.ts) の `basePath` を新しいリポジトリ名に合わせて変更してください。
