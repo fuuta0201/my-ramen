@@ -9,14 +9,14 @@ type RamenShopListProps = {
 export default function RamenShopList({ shops, genres }: RamenShopListProps) {
   if (shops.length === 0) {
     return (
-      <div className="border-border text-muted-foreground rounded-lg border p-6 text-sm">
+      <div className="border-border bg-card text-muted-foreground rounded-lg border p-6 text-sm leading-6 shadow-sm">
         該当するラーメン店はまだ登録されていません。
       </div>
     );
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {shops.map((shop) => (
         <RamenShopCard
           key={shop.id}

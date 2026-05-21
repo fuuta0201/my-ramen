@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import GenreNav from "@/src/components/GenreNav";
 import RamenShopList from "@/src/components/RamenShopList";
+import SiteHeader from "@/src/components/SiteHeader";
 import { genres } from "@/src/data/genres";
 import { getGenreById, getShopsByGenreId } from "@/src/lib/ramen";
 
@@ -27,20 +28,20 @@ export default async function GenrePage({ params }: GenrePageProps) {
   const shops = getShopsByGenreId(selectedGenre.id);
 
   return (
-    <main className="bg-background min-h-screen">
-      <section className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-12 sm:py-16">
-        <div className="flex flex-col gap-4">
-          <p className="text-muted-foreground text-sm font-medium">
+    <main className="min-h-screen">
+      <SiteHeader />
+      <section className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5 py-10 sm:px-6 sm:py-14">
+        <div className="flex max-w-3xl flex-col gap-5">
+          <p className="text-accent text-sm font-semibold tracking-normal">
             Selected genre
           </p>
-          <div className="flex max-w-3xl flex-col gap-5">
-            <h1 className="text-foreground text-4xl font-semibold tracking-normal sm:text-5xl">
-              {selectedGenre.name}のおすすめ店
-            </h1>
-            <p className="text-muted-foreground text-base leading-7 sm:text-lg">
-              選択したジャンルに合うラーメン店を静的データから表示しています。
-            </p>
-          </div>
+          <h1 className="text-foreground text-4xl leading-tight font-semibold tracking-normal text-balance sm:text-5xl">
+            {selectedGenre.name}のおすすめ店
+          </h1>
+          <p className="text-muted-foreground max-w-2xl text-base leading-8 text-pretty sm:text-lg">
+            選択したジャンルに合うラーメン店を、店舗詳細とGoogle
+            Mapへの導線つきで表示しています。
+          </p>
         </div>
 
         <GenreNav genres={genres} selectedGenreId={selectedGenre.id} />

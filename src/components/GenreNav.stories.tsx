@@ -25,7 +25,7 @@ export const Default: Story = {
     const shoyuLink = canvas.getByRole("link", { name: "醤油" });
 
     await expect(allLink).toHaveAttribute("href", "/");
-    await expect(shoyuLink).toHaveAttribute("href", "/genres/1");
+    await expect(shoyuLink).toHaveAttribute("href", "/genres/1/");
     await userEvent.hover(shoyuLink);
     await expect(shoyuLink).toBeVisible();
   },
@@ -39,7 +39,7 @@ export const SelectedMiso: Story = {
     const canvas = within(canvasElement);
     const selectedLink = canvas.getByRole("link", { name: "味噌" });
 
-    await expect(selectedLink).toHaveAttribute("href", "/genres/2");
+    await expect(selectedLink).toHaveAttribute("href", "/genres/2/");
     await expect(selectedLink).toHaveClass("bg-foreground");
   },
 };

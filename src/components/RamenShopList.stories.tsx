@@ -26,7 +26,9 @@ export const Default: Story = {
     const detailLinks = canvas.getAllByRole("link", { name: /詳細を見る/ });
 
     await expect(detailLinks).toHaveLength(4);
-    await expect(canvas.getByText("味噌麺処 花道庵")).toBeVisible();
+    await expect(
+      canvas.getByText("吟醸味噌らーめん まごころ亭 本店"),
+    ).toBeVisible();
   },
 };
 

@@ -1,29 +1,71 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --border: #e5e5e5;
+  --background: #fbfbfa;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #6b7280;
+  --border: #e4e4e7;
+  --accent: #e11d48;
+  --accent-foreground: #fff7f9;
+  --ring: #f43f5e;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card: #121216;
+  --muted: #1f1f25;
+  --muted-foreground: #a1a1aa;
+  --border: #2f2f36;
+  --accent: #fb7185;
+  --accent-foreground: #2a060d;
+  --ring: #fb7185;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  background: var(--background);
+}
+
 body {
   min-height: 100vh;
-  background: var(--background);
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in oklab, var(--accent) 16%, transparent),
+      transparent 32rem
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--muted) 58%, transparent),
+      var(--background) 24rem
+    );
   color: var(--foreground);
   font-family:
     Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }

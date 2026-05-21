@@ -24,11 +24,12 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const detailLink = canvas.getByRole("link", { name: /詳細を見る/ });
-    const mapLink = canvas.getByRole("link", { name: "Map" });
+    const mapLink = canvas.getByRole("link", { name: "Google Map" });
 
     await expect(canvas.getByText("醤油")).toBeVisible();
-    await expect(canvas.getByText("らぁ麺 はやし田 新宿本店")).toBeVisible();
-    await expect(detailLink).toHaveAttribute("href", "/shops/1");
+    await expect(canvas.getByRole("heading", { name: /ヒグマ/ })).toBeVisible();
+    await expect(canvas.getByRole("img", { name: /ヒグマ/ })).toBeVisible();
+    await expect(detailLink).toHaveAttribute("href", "/shops/1/");
     await expect(mapLink).toHaveAttribute("target", "_blank");
     await userEvent.hover(mapLink);
     await expect(mapLink).toHaveAttribute("href", ramenShops[0].googleMapUrl);
@@ -43,5 +44,17 @@ export const WithoutGenre: Story = {
     const canvas = within(canvasElement);
 
     await expect(canvas.getByText("ジャンル未設定")).toBeVisible();
+  },
+};
+
+export const WithoutImage: Story = {
+  args: {
+    shop: ramenShops[4],
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await expect(canvas.getByText("RAMEN")).toBeVisible();
+    await expect(canvas.getByText("青島食堂 宮内駅前店")).toBeVisible();
   },
 };
