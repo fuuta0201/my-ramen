@@ -6,6 +6,7 @@ export const ramenShops: RamenShop[] = [
     name: "らーめん　ヒグマ　本店",
     genreId: 1,
     googleMapUrl: "https://maps.app.goo.gl/bUmCAcLsLtqDEM4J8",
+    description: "伝統的な生姜醤油ラーメン。個人的に一番美味しい。",
     imageUrl: "/higuma_syoyu.webp",
   },
   {
@@ -13,6 +14,7 @@ export const ramenShops: RamenShop[] = [
     name: "らーめん家りりん",
     genreId: 8,
     googleMapUrl: "https://maps.app.goo.gl/WpBvabJD1afkwT7f7",
+    description: "燕背脂系だが絶品の自家製麺で最高に美味しい。美味しすぎる。",
     imageUrl: "/ririn.webp",
   },
   {
@@ -20,6 +22,7 @@ export const ramenShops: RamenShop[] = [
     name: "夢を語れ長岡",
     genreId: 6,
     googleMapUrl: "https://maps.app.goo.gl/dmNecjTCfg7q4qf36",
+    description: "二郎インスパイア系で一番美味しい。チャーシューがほろほろ。",
     imageUrl: "/yumewokatare.webp",
   },
   {
@@ -27,6 +30,7 @@ export const ramenShops: RamenShop[] = [
     name: "吟醸味噌らーめん まごころ亭 本店",
     genreId: 2,
     googleMapUrl: "https://maps.app.goo.gl/ysEG914tknnd6N9FA",
+    description: "新潟濃厚味噌ラーメン。特大チャーシューに多様な味変が素敵。",
     imageUrl: "/magokorotei.webp",
   },
   {
@@ -34,12 +38,15 @@ export const ramenShops: RamenShop[] = [
     name: "青島食堂 宮内駅前店",
     genreId: 1,
     googleMapUrl: "https://maps.app.goo.gl/Hg1zCKSWe7ysrd6x8",
+    description: "元祖生姜醤油。一度は行くべし。",
   },
   {
     id: 6,
     name: "らーめん　ヒグマ　本店",
     genreId: 4,
     googleMapUrl: "https://maps.app.goo.gl/bUmCAcLsLtqDEM4J8",
+    description:
+      "生姜醤油ラーメンがメインのお店だが、塩ラーメンも絶品。いつでも食べたい。",
     imageUrl: "/higuma_shio.webp",
   },
   {
@@ -47,12 +54,15 @@ export const ramenShops: RamenShop[] = [
     name: "らーめん　ヒグマ　本店",
     genreId: 2,
     googleMapUrl: "https://maps.app.goo.gl/bUmCAcLsLtqDEM4J8",
+    description: "優しい味でいつでも食べれる。",
   },
   {
     id: 8,
     name: "長岡ラーメン【麺の風 祥気】",
     genreId: 4,
     googleMapUrl: "https://maps.app.goo.gl/TmdRGg9w1QfaWgcB8",
+    description:
+      "鶏出汁がよく効いていて五臓六腑に染み渡る。最高に美味しいスープ。",
     imageUrl: "/syoki.webp",
   },
   {
@@ -60,6 +70,7 @@ export const ramenShops: RamenShop[] = [
     name: "麺屋松",
     genreId: 6,
     googleMapUrl: "https://maps.app.goo.gl/YjmaDB1Y3yq3NT296",
+    description: "二郎系に挑戦したい人はまず行くべき。食べやすいし美味しい。",
     imageUrl: "/matsu.webp",
   },
   {
@@ -67,30 +78,35 @@ export const ramenShops: RamenShop[] = [
     name: "ラーメンあおきや",
     genreId: 1,
     googleMapUrl: "https://maps.app.goo.gl/NZkEnzA4joM1cPws6",
+    description: "",
   },
   {
     id: 11,
     name: "酒麺亭潤",
     genreId: 8,
     googleMapUrl: "https://maps.app.goo.gl/Wie5DvBqjAnxgzCn9",
+    description: "",
   },
   {
     id: 12,
     name: "らーめんの土佐屋",
     genreId: 1,
     googleMapUrl: "https://maps.app.goo.gl/Wie5DvBqjAnxgzCn9",
+    description: "生姜醤油系だが、背脂版も用意されていてこれがまたうまい。",
   },
   {
     id: 13,
     name: "らーめんの土佐屋",
     genreId: 2,
     googleMapUrl: "https://maps.app.goo.gl/Wie5DvBqjAnxgzCn9",
+    description: "生姜醤油系だが、背脂版も用意されていてこれがまたうまい。",
   },
   {
     id: 14,
     name: "らーめんの土佐屋",
     genreId: 4,
     googleMapUrl: "https://maps.app.goo.gl/Wie5DvBqjAnxgzCn9",
+    description: "生姜醤油系だが、背脂版も用意されていてこれがまたうまい。",
     imageUrl: "/tosaya_shio.webp",
   },
   {
@@ -98,18 +114,21 @@ export const ramenShops: RamenShop[] = [
     name: "新潟油そばモジャ",
     genreId: 8,
     googleMapUrl: "https://maps.app.goo.gl/wrbwAHNTnicBFjYH9",
+    description: "",
   },
   {
     id: 16,
     name: "限界を越えろ新潟",
     genreId: 6,
     googleMapUrl: "https://maps.app.goo.gl/wzqVjennLzr87Kxi7",
+    description: "",
   },
   {
     id: 17,
     name: "らぁめん しょうがの海",
     genreId: 1,
     googleMapUrl: "https://maps.app.goo.gl/HmA6WcttuHE4ctzK7",
+    description: "生姜醤油系だが、背脂版も用意されていてこれがまたうまい。",
     imageUrl: "/syoganoumi.webp",
   },
   {
@@ -117,6 +136,7 @@ export const ramenShops: RamenShop[] = [
     name: "家系ラーメン 上越家",
     genreId: 7,
     googleMapUrl: "https://maps.app.goo.gl/4pxDewJbKNJ9kwD27",
+    description: "",
     imageUrl: "/joetsuya.webp",
   },
   {
@@ -124,6 +144,8 @@ export const ramenShops: RamenShop[] = [
     name: "極濃湯麺フタツメ 東明店",
     genreId: 9,
     googleMapUrl: "https://maps.app.goo.gl/jjYfUzcGxJ4XYLT19",
+    description:
+      "タンメンに大きい揚げ鶏がトッピングされているパイコータンメンが激うま。",
     imageUrl: "/futatsume.webp",
   },
   {
@@ -131,6 +153,7 @@ export const ramenShops: RamenShop[] = [
     name: "味濱家 山二ツ店",
     genreId: 7,
     googleMapUrl: "https://maps.app.goo.gl/27QHTZLGnyi4ybad8",
+    description: "家系。リーズナブルでとっても美味しい。メニューも豊富。",
     imageUrl: "/mihamaya.webp",
   },
   {
@@ -138,6 +161,7 @@ export const ramenShops: RamenShop[] = [
     name: "鶏そば縁道 本店",
     genreId: 10,
     googleMapUrl: "https://maps.app.goo.gl/d7Jhnaz4wjptrceL7",
+    description: "オシャレなラーメン屋さん。泡のスープがとても美味しい。",
     imageUrl: "/endo.webp",
   },
   {
@@ -145,18 +169,21 @@ export const ramenShops: RamenShop[] = [
     name: "麺縁ジョウモン",
     genreId: 10,
     googleMapUrl: "https://maps.app.goo.gl/KgA5Hs6gfFyFNUmN7",
+    description: "",
   },
   {
     id: 23,
     name: "安福亭 柏町本店",
     genreId: 8,
     googleMapUrl: "https://maps.app.goo.gl/rUEWUWAvaWizdZ237",
+    description: "",
   },
   {
     id: 24,
     name: "東横本店",
     genreId: 2,
     googleMapUrl: "https://maps.app.goo.gl/sUVMVVRqaTLMKuDz6",
+    description: "",
     imageUrl: "/toyoko.webp",
   },
   {
@@ -164,30 +191,35 @@ export const ramenShops: RamenShop[] = [
     name: "麺場ふうらいぼう",
     genreId: 10,
     googleMapUrl: "https://maps.app.goo.gl/qRNoFgeCw9TX3a8B8",
+    description: "",
   },
   {
     id: 26,
     name: "麺や 真登",
     genreId: 4,
     googleMapUrl: "https://maps.app.goo.gl/ap4YiYet7jL6SoHE9",
+    description: "",
   },
   {
     id: 27,
     name: "手打ち麺処暁天",
     genreId: 5,
     googleMapUrl: "https://maps.app.goo.gl/D8ym4d3naDvbDQeV7",
+    description: "",
   },
   {
     id: 28,
     name: "つけ麺・らーめん 越後維新 湯沢本店",
     genreId: 5,
     googleMapUrl: "https://maps.app.goo.gl/oFqfHytzrWx2836W7",
+    description: "",
   },
   {
     id: 29,
     name: "らーめん処潤 宮内店",
     genreId: 8,
     googleMapUrl: "https://maps.app.goo.gl/SWsHTLZc5XKApp587",
+    description: "",
     imageUrl: "/jun_miyauchi.webp",
   },
 ];

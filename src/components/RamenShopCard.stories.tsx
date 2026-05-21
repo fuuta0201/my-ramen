@@ -58,3 +58,18 @@ export const WithoutImage: Story = {
     await expect(canvas.getByText("青島食堂 宮内駅前店")).toBeVisible();
   },
 };
+
+export const WithDescription: Story = {
+  args: {
+    shop: {
+      ...ramenShops[0],
+      description:
+        "生姜の香りと醤油のキレを楽しめる、長岡らしい一杯を探しているときにおすすめです。",
+    },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await expect(canvas.getByText(/生姜の香りと醤油のキレ/)).toBeVisible();
+  },
+};

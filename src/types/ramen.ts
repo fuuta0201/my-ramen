@@ -3,6 +3,7 @@ export type RamenShop = {
   name: string;
   genreId: number;
   googleMapUrl: string;
+  description?: string;
   imageUrl?: string;
 };
 

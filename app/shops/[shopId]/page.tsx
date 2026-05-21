@@ -67,6 +67,11 @@ export default async function ShopPage({ params }: ShopPageProps) {
                 店舗の場所や営業時間の確認はGoogle Mapで行えます。
                 気になる一杯があれば、現在地からの経路もあわせて確認してください。
               </p>
+              {shop.description && (
+                <p className="text-foreground/85 max-w-2xl text-base leading-8 text-pretty">
+                  {shop.description}
+                </p>
+              )}
             </div>
 
             <a

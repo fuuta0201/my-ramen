@@ -38,6 +38,11 @@ export default function RamenShopCard({ shop, genre }: RamenShopCardProps) {
           <h3 className="text-xl leading-snug font-semibold tracking-normal text-balance">
             {shop.name}
           </h3>
+          {shop.description && (
+            <p className="text-muted-foreground line-clamp-2 text-sm leading-6 text-pretty">
+              {shop.description}
+            </p>
+          )}
         </div>
 
         <div className="mt-auto flex flex-col gap-3">
