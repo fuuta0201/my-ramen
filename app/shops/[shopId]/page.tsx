@@ -6,6 +6,8 @@ import { ramenShops } from "@/src/data/ramenShops";
 import { buttonVariants } from "@/src/components/ui/Button";
 import { getGenreById, getShopById } from "@/src/lib/ramen";
 
+const PATH = process.env.GITHUB_PAGES === "true" ? "/my-ramen" : "";
+
 type ShopPageProps = {
   params: Promise<{
     shopId: string;
@@ -40,9 +42,9 @@ export default async function ShopPage({ params }: ShopPageProps) {
 
         <article className="border-border flex flex-col gap-8 rounded-lg border p-6 sm:p-8">
           {shop.imageUrl && (
-            <div className="bg-muted relative aspect-[4/3] w-full overflow-hidden rounded-md">
+            <div className="bg-muted relative aspect-4/3 w-full overflow-hidden rounded-md">
               <Image
-                src={shop.imageUrl}
+                src={PATH + shop.imageUrl}
                 alt={`${shop.name}のラーメン`}
                 fill
                 className="object-cover"
